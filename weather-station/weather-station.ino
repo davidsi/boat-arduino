@@ -184,13 +184,12 @@ void loop() {
         unsigned dir   = getWindDirectionAverage();
         
         Serial.print(  speed );     Serial.print("\t\t"); 
-        Serial.print( dir ); 
+                                    Serial.print( dir ); 
         getHeading( dir );          Serial.print("\t\t"); 
         getWindStrength( speed);    Serial.print("\t\t"); 
 
         char i2cBuffer[8];
-        prepareI2C( i2cBuffer );
-        Serial.println( (char *)i2cBuffer );
+        prepareI2C( i2cBuffer );    Serial.println( (char *)i2cBuffer );
 #endif        
     } 
 } 
