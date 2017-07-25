@@ -3,15 +3,15 @@
 #include "TimerOne.h" // Timer Interrupt set to 2 second for read sensors 
 
 #define SLAVE_ADDR  4
-#define UNO_DEBUG
+//#define UNO_DEBUG
 
-#ifdef UNO_DEBUG
+//#ifdef UNO_DEBUG
 //#define WindSensorPin (2)       // The pin location of the anemometer sensor 
 //#define WindVanePin (A1)        // The pin the wind vane sensor is connected to 
 //#else
 #define WindSensorPin (3)       // The pin location of the anemometer sensor 
 #define WindVanePin (A3)        // The pin the wind vane sensor is connected to 
-#endif
+//#endif
 
 unsigned int           windSpeed[10];               // speed knots
 unsigned int           windSpeedIdx;
